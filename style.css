@@ -52,9 +52,10 @@ header {
 }
 
 .navbar ul li a::after {
-  content: "";
+  content: '';
   width: 0%;
   height: 2px;
+  background-color: var(--main-color);
   display: block;
   transition: all 0.3s;
 }
@@ -136,8 +137,11 @@ header {
   transition: all 0.3s;
 }
 
+
+
 .cta .cta-project button:hover {
   transform: scale(1.02);
+  background-color: #0568fd;
 }
 
 .cta .cta-contact button {
@@ -220,7 +224,18 @@ header {
 .tentang .main-content .left-col {
   flex-basis: 40%;
   position: relative;
+  transition: all 0.5s;
+  cursor: pointer;
 }
+
+.tentang .main-content .left-col:hover img {    
+    transform: translateY(-8px);
+}
+
+.tentang .main-content .left-col:hover .box {
+    transform: rotate(8deg) translate(10px, 10px);
+}
+
 
 .tentang .main-content .right-col {
   display: flex;
@@ -238,7 +253,10 @@ header {
   border-radius: 12px;
   z-index: -1;
   transform: rotate(5deg);
+  transition: all 0.5s;
 }
+
+
 
 .tentang .main-content .left-col img {
   border: 3px solid var(--main-color);
@@ -246,7 +264,10 @@ header {
   width: 300px;
   height: 350px;
   object-fit: cover;
+  transition: all 0.3s;
 }
+
+
 
 .tentang .main-content .right-col .about .title h2,
 .tentang .main-content .right-col .skills .title h2 {
@@ -276,11 +297,22 @@ header {
   font-family: var(--secondary-font);
   font-weight: 500;
   color: var(--black-color);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.tentang .main-content .right-col .skill-badge .badge:hover {
+    background-color: var(--gold-color);
+    transform: scale(1.01);
 }
 
 .tentang .main-content .right-col .skill-badge .badge:nth-child(even) {
   background-color: var(--main-color);
   color: white;
+}
+
+.tentang .main-content .right-col .skill-badge .badge:nth-child(even):hover {
+    background-color: #0568fd;
 }
 
 .tentang .main-content .right-col .skill-badge .badge i {
@@ -308,6 +340,12 @@ header {
     border-radius: 12px;
     max-width: 364px;
     box-shadow: 0 0 4px rgb(0, 0, 0, 0.4);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.projek .main-content .card:hover {
+    transform: translateY(-4px);
 }
 
 .projek .main-content .card .img img {
@@ -341,7 +379,15 @@ header {
     border: none;
     outline: none;
     background-color: var(--main-color);
+    transition: all 0.3s;
 }
+
+.projek .main-content .card .cta button:hover {
+    background-color: #0568fd;
+    transform: scale(1.01);
+}
+
+
 
 .projek .main-content .card .cta button a {
     color: white;
@@ -364,6 +410,13 @@ header {
     flex-direction: column;
     align-items: center;
     padding: 3rem 4rem 4rem;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.kontak .main-content .card:hover{
+    border:1px solid var(--main-color);
+    transform: translateY(-4px);
 }
 
 .kontak .main-content .card .icon {
@@ -412,6 +465,12 @@ header {
     padding: 0.8rem;
     border: 1px solid #d9d9d9;
     box-shadow: 0 0 4px rgb(0, 0, 0, 0.2);
+    transition: all 0.5s;
+}
+
+.kontak .main-content .card .sosial-media a:hover {
+    background-color: var(--main-color);
+    color: white;
 }
 
 
