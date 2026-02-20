@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --main-color:#0045AD;
+    --secondary-color: #F9F2DC;
+    --primary-font: "Poppins", sans-serif;
+    --secondary-font: "Plus Jakarta Sans", sans-serif;
+    --black-color: rgb(0,0,0,0.8);
+}
+
+header {
+    max-width: 100%;
+}
+
+.navbar {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 4px rgb(0, 0,0,0.4);
+}
+
+.navbar .logo h3 {
+    font-family: var(--secondary-font);
+    font-weight: bold;
+    color: var(--main-color);
+    font-size: 1.3rem;
+}
+
+.navbar ul {
+    display: flex;
+    gap:1.8rem;
+}
+
+.navbar ul li a {
+    font-size: 0.9rem;
+    color: var(--black-color);
+    font-weight: 500;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    position: relative;
+
+}
+
+.navbar ul li a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    display: block;
+    transition: all 0.3s;
+}
+
+.navbar ul li a:hover::after {
+    color:var(--main-color);
+    width: 100%;
+}
+
+
+/* Beranda */
+.beranda {
+    max-width: 100%;
+    display: flex;
+    height: 100dvh;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.beranda .textbox {
+    max-width: 600px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-top: 1rem;
+}
+
+.beranda .badge {
+    background-color: var(--secondary-color);
+    border-radius: 10pc;
+    padding: 0.8rem 2rem;
+    font-weight: bold;
+    color: var(--black-color);
+    font-family: var(--secondary-font);
+}
+
+.beranda .textbox .name h2 {
+    font-size: 2.8rem;
+    color: var(--black-color);
+}
+
+.beranda .textbox .name h2 > span {
+    color: var(--main-color);
+}
+
+.beranda .textbox .slogan p {
+    font-family: var(--secondary-font);
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--black-color);
+}
+
+.beranda .textbox .slogan span {
+    color: var(--main-color);
+}
+
+.beranda .textbox .description p {
+    font-family: var(--secondary-font);
+    color: var(--black-color);
+    line-height: 27px;
+    font-size: 1.1rem;
+}
+
+.cta {
+    max-width: 100%;
+    display: flex;
+    gap: 1.3rem;
+    margin-top: 3rem;
+    justify-content: center;
+}
+
+
+.cta .cta-project button {
+    background-color: var(--main-color);
+    outline: none;
+    border: none;
+    border-radius: 10pc;
+    padding: 0.8rem 2rem;
+    transition: all 0.3s;
+}
+
+.cta .cta-project button:hover {
+    transform: scale(1.02);
+}
+
+.cta .cta-contact button {
+    border: 2px solid #d9d9d9;
+    padding: 0.8rem 3.2rem;
+    border-radius: 10pc;
+    transition: all 0.3s;
+}
+
+.cta .cta-contact button:hover {
+    transform: scale(1.02);
+}
+
+
+.cta .cta-project button a {
+    color: white;
+    font-size: 1rem;
+    font-family: var(--secondary-font);
+    font-weight: bold;
+}
+
+.cta .cta-contact button a {
+    color: var(--black-color);
+    font-size: 1rem;
+    font-family: var(--secondary-font);
+    font-weight: bold;
+}
