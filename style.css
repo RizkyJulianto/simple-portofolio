@@ -11,14 +11,14 @@
 :root {
   --main-color: #0045ad;
   --secondary-color: #f9f2dc;
-  --gold-color: #F9DA7D;
+  --gold-color: #f9da7d;
   --primary-font: "Poppins", sans-serif;
   --secondary-font: "Plus Jakarta Sans", sans-serif;
   --black-color: rgb(0, 0, 0, 0.8);
 }
 
 body {
-    height: 5000px;
+  height: 5000px;
 }
 
 header {
@@ -121,7 +121,7 @@ header {
   font-size: 1.1rem;
 }
 
-.cta {
+.beranda .cta {
   max-width: 100%;
   display: flex;
   gap: 1.3rem;
@@ -129,7 +129,7 @@ header {
   justify-content: center;
 }
 
-.cta .cta-project button {
+.beranda .cta .cta-project button {
   background-color: var(--main-color);
   outline: none;
   border: none;
@@ -173,114 +173,175 @@ header {
   position: relative;
 }
 
-.tentang .heading {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.3rem;
+.tentang .heading,
+.projek .heading{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.3rem;
 }
 
-.tentang .heading .title {
+.tentang .heading .title,
+.projek .heading .title {
   background-color: var(--secondary-color);
   border-radius: 10pc;
   padding: 0.8rem 2rem;
   max-width: fit-content;
 }
 
-.tentang .heading .title span {
-    font-weight: bold;
-    font-family: var(--secondary-font);
-    color: var(--black-color);
+.tentang .heading .title span,
+.projek .heading .title span {
+  font-weight: bold;
+  font-family: var(--secondary-font);
+  color: var(--black-color);
 }
 
-.tentang .heading .title span i {
-    color: var(--gold-color);
-    padding-right: 10px;
+.tentang .heading .title span i,
+.projek .heading .title span i {
+  color: var(--gold-color);
+  padding-right: 10px;
 }
 
 .tentang .heading .subtitle p {
-    color: var(--black-color);
-    font-family: var(--secondary-font);
-    font-weight: 500;
+  color: var(--black-color);
+  font-family: var(--secondary-font);
+  font-weight: 500;
 }
 
 .tentang .main-content {
-    max-width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 5rem ;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 5rem;
 }
 
 .tentang .main-content .left-col {
-    flex-basis: 40%;
-    position: relative;
+  flex-basis: 40%;
+  position: relative;
 }
 
 .tentang .main-content .right-col {
-    display: flex;
-    flex-basis: 55%;
-    flex-direction: column;
-    gap: 3rem;
+  display: flex;
+  flex-basis: 55%;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 .tentang .main-content .left-col .box {
-    background-color: var(--main-color);
-    display: block;
-    position: absolute;
-    width: 300px;
-    height: 350px;
-    border-radius: 12px;
-    z-index: -1;
-    transform: rotate(5deg);
+  background-color: var(--main-color);
+  display: block;
+  position: absolute;
+  width: 300px;
+  height: 350px;
+  border-radius: 12px;
+  z-index: -1;
+  transform: rotate(5deg);
 }
 
 .tentang .main-content .left-col img {
-    border: 3px solid var(--main-color) ;
-    border-radius: 12px;
-    width: 300px;
-    height: 350px;
-    object-fit: cover;
+  border: 3px solid var(--main-color);
+  border-radius: 12px;
+  width: 300px;
+  height: 350px;
+  object-fit: cover;
 }
 
 .tentang .main-content .right-col .about .title h2,
 .tentang .main-content .right-col .skills .title h2 {
-    color: var(--black-color);
-    font-size: 1.8rem;
+  color: var(--black-color);
+  font-size: 1.8rem;
 }
 
 .tentang .main-content .right-col .about .description p {
-    text-align: justify;
-    color: var(--black-color);
-    font-family: var(--secondary-font);
-    margin-top: 1rem;
-    line-height: 27px;
+  text-align: justify;
+  color: var(--black-color);
+  font-family: var(--secondary-font);
+  margin-top: 1rem;
+  line-height: 27px;
 }
 
-
 .tentang .main-content .right-col .skill-badge {
-    margin-top: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .tentang .main-content .right-col .skill-badge .badge {
-    background-color: var(--secondary-color);
-    padding: 0.5rem 1.3rem;
-    border-radius: 10pc;
-    font-family: var(--secondary-font);
-    font-weight: 500;
-    color: var(--black-color);
+  background-color: var(--secondary-color);
+  padding: 0.5rem 1.3rem;
+  border-radius: 10pc;
+  font-family: var(--secondary-font);
+  font-weight: 500;
+  color: var(--black-color);
 }
 
-
-
 .tentang .main-content .right-col .skill-badge .badge:nth-child(even) {
-    background-color: var(--main-color);
-    color: white;
+  background-color: var(--main-color);
+  color: white;
 }
 
 .tentang .main-content .right-col .skill-badge .badge i {
-    margin-right: 0.5rem;
+  margin-right: 0.5rem;
 }
 
+/* Projek */
+
+.projek {
+    width: 100%;
+    padding: 9rem 1.5rem;
+}
+
+.projek .main-content {
+    display: flex;
+    margin-top: 4rem;
+    width: 100%;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.projek .main-content .card {
+    border: 1px solid #d9d9d9;
+    border-radius: 12px;
+    max-width: 364px;
+    box-shadow: 0 0 4px rgb(0, 0, 0, 0.4);
+}
+
+.projek .main-content .card .img img {
+    max-width: 100%;
+    border-radius: 12px 12px 0 0;
+}
+
+.projek .main-content .card .title h3 {
+    padding: 0.5rem 1.3rem;
+    color: var(--black-color);
+    font-size: 1rem;
+}
+
+.projek .main-content .card .description p {
+    text-align: justify;
+    padding: 0.5rem 1.3rem;
+    font-family: var(--secondary-font);
+    color: var(--black-color);
+    font-weight: 400;
+    line-height: 25px;
+}
+
+.projek .main-content .card .cta {
+    display: inline-block;
+    padding: 1rem 1.5rem;
+}
+
+.projek .main-content .card .cta button {
+    border-radius: 6px;
+    padding: 0.5rem 1.4rem;
+    border: none;
+    outline: none;
+    background-color: var(--main-color);
+}
+
+.projek .main-content .card .cta button a {
+    color: white;
+    font-family: var(--secondary-font);
+    font-weight: bold;
+}
