@@ -17,9 +17,7 @@
   --black-color: rgb(0, 0, 0, 0.8);
 }
 
-body {
-  height: 5000px;
-}
+
 
 header {
   max-width: 100%;
@@ -174,7 +172,8 @@ header {
 }
 
 .tentang .heading,
-.projek .heading{
+.projek .heading,
+.kontak .heading{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -182,7 +181,8 @@ header {
 }
 
 .tentang .heading .title,
-.projek .heading .title {
+.projek .heading .title, 
+.kontak .heading .title{
   background-color: var(--secondary-color);
   border-radius: 10pc;
   padding: 0.8rem 2rem;
@@ -190,14 +190,16 @@ header {
 }
 
 .tentang .heading .title span,
-.projek .heading .title span {
+.projek .heading .title span,
+.kontak .heading .title span {
   font-weight: bold;
   font-family: var(--secondary-font);
   color: var(--black-color);
 }
 
 .tentang .heading .title span i,
-.projek .heading .title span i {
+.projek .heading .title span i, 
+.kontak .heading .title span i{
   color: var(--gold-color);
   padding-right: 10px;
 }
@@ -287,12 +289,13 @@ header {
 
 /* Projek */
 
-.projek {
+.projek{
     width: 100%;
     padding: 9rem 1.5rem;
 }
 
-.projek .main-content {
+.projek .main-content,
+.kontak .main-content{
     display: flex;
     margin-top: 4rem;
     width: 100%;
@@ -344,4 +347,97 @@ header {
     color: white;
     font-family: var(--secondary-font);
     font-weight: bold;
+}
+
+
+/* Kontak */
+.kontak {
+    width: 100%;
+    padding: 5rem 1.5rem;
+}
+
+.kontak .main-content .card {
+    border: 1px solid #d9d9d9;
+    border-radius: 12px;
+    box-shadow: 0 0 4px rgb(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 4rem 4rem;
+}
+
+.kontak .main-content .card .icon {
+    border: 2px solid var(--main-color);
+    padding: 1.3rem;
+    border-radius: 12px;
+}
+
+.kontak .main-content .card .icon i {
+    font-size: 1.6rem;
+    color: var(--main-color);
+}
+
+.kontak .main-content .card .title h3 {
+    color: var(--black-color);
+    margin-top: 1.5rem;
+}
+
+.kontak .main-content .card .email span {
+    color: var(--main-color);
+    font-family: var(--secondary-font);
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 0.6rem;
+}
+
+.kontak .main-content .card .slogan span {
+    margin-top: 1rem;
+    display: inline-block;
+    font-family: var(--secondary-font);
+    font-weight: bold;
+    color: rgb(0, 0, 0, 0.6);
+    font-style: italic;
+    font-size: 1.3rem;
+}
+
+.kontak .main-content .card .sosial-media {
+    margin-top: 3rem;  
+}
+
+.kontak .main-content .card .sosial-media a{
+    border-radius: 12px;
+    font-size: 1.4rem;
+    margin: 0 10px;
+    color: var(--main-color);
+    padding: 0.8rem;
+    border: 1px solid #d9d9d9;
+    box-shadow: 0 0 4px rgb(0, 0, 0, 0.2);
+}
+
+
+/* Footer */
+.footer {
+    max-width: 100%;
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 9rem;
+    border-top: 1px solid #d9d9d9;
+}
+
+
+
+.footer .logo h3 {
+  font-family: var(--secondary-font);
+  font-weight: bold;
+  color: var(--main-color);
+  font-size: 1.3rem;
+}
+
+.footer .copyright span {
+    font-family: var(--secondary-font);
+    color: rgb(0, 0, 0, 0.6);
+    font-size: 0.8rem;
+    font-weight: 500;
 }
