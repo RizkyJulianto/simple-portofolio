@@ -1,167 +1,286 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style-type: none;
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 :root {
-    --main-color:#0045AD;
-    --secondary-color: #F9F2DC;
-    --primary-font: "Poppins", sans-serif;
-    --secondary-font: "Plus Jakarta Sans", sans-serif;
-    --black-color: rgb(0,0,0,0.8);
+  --main-color: #0045ad;
+  --secondary-color: #f9f2dc;
+  --gold-color: #F9DA7D;
+  --primary-font: "Poppins", sans-serif;
+  --secondary-font: "Plus Jakarta Sans", sans-serif;
+  --black-color: rgb(0, 0, 0, 0.8);
+}
+
+body {
+    height: 5000px;
 }
 
 header {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 .navbar {
-    padding: 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 0 4px rgb(0, 0,0,0.4);
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 4px rgb(0, 0, 0, 0.4);
 }
 
 .navbar .logo h3 {
-    font-family: var(--secondary-font);
-    font-weight: bold;
-    color: var(--main-color);
-    font-size: 1.3rem;
+  font-family: var(--secondary-font);
+  font-weight: bold;
+  color: var(--main-color);
+  font-size: 1.3rem;
 }
 
 .navbar ul {
-    display: flex;
-    gap:1.8rem;
+  display: flex;
+  gap: 1.8rem;
 }
 
 .navbar ul li a {
-    font-size: 0.9rem;
-    color: var(--black-color);
-    font-weight: 500;
-    font-family: "Plus Jakarta Sans", sans-serif;
-    position: relative;
-
+  font-size: 0.9rem;
+  color: var(--black-color);
+  font-weight: 500;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  position: relative;
 }
 
 .navbar ul li a::after {
-    content: '';
-    width: 0%;
-    height: 2px;
-    display: block;
-    transition: all 0.3s;
+  content: "";
+  width: 0%;
+  height: 2px;
+  display: block;
+  transition: all 0.3s;
 }
 
 .navbar ul li a:hover::after {
-    color:var(--main-color);
-    width: 100%;
+  color: var(--main-color);
+  width: 100%;
 }
-
 
 /* Beranda */
 .beranda {
-    max-width: 100%;
-    display: flex;
-    height: 100dvh;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 3rem;
+  max-width: 100%;
+  display: flex;
+  height: 100dvh;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
 }
 
 .beranda .textbox {
-    max-width: 600px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 1.6rem;
-    margin-top: 1rem;
+  max-width: 600px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  margin-top: 1rem;
 }
 
 .beranda .badge {
-    background-color: var(--secondary-color);
-    border-radius: 10pc;
-    padding: 0.8rem 2rem;
-    font-weight: bold;
-    color: var(--black-color);
-    font-family: var(--secondary-font);
+  background-color: var(--secondary-color);
+  border-radius: 10pc;
+  padding: 0.8rem 2rem;
+  font-weight: bold;
+  color: var(--black-color);
+  font-family: var(--secondary-font);
 }
 
 .beranda .textbox .name h2 {
-    font-size: 2.8rem;
-    color: var(--black-color);
+  font-size: 2.8rem;
+  color: var(--black-color);
 }
 
 .beranda .textbox .name h2 > span {
-    color: var(--main-color);
+  color: var(--main-color);
 }
 
 .beranda .textbox .slogan p {
+  font-family: var(--secondary-font);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--black-color);
+}
+
+.beranda .textbox .slogan span {
+  color: var(--main-color);
+}
+
+.beranda .textbox .description p {
+  font-family: var(--secondary-font);
+  color: var(--black-color);
+  line-height: 27px;
+  font-size: 1.1rem;
+}
+
+.cta {
+  max-width: 100%;
+  display: flex;
+  gap: 1.3rem;
+  margin-top: 3rem;
+  justify-content: center;
+}
+
+.cta .cta-project button {
+  background-color: var(--main-color);
+  outline: none;
+  border: none;
+  border-radius: 10pc;
+  padding: 0.8rem 2rem;
+  transition: all 0.3s;
+}
+
+.cta .cta-project button:hover {
+  transform: scale(1.02);
+}
+
+.cta .cta-contact button {
+  border: 2px solid #d9d9d9;
+  padding: 0.8rem 3.2rem;
+  border-radius: 10pc;
+  transition: all 0.3s;
+}
+
+.cta .cta-contact button:hover {
+  transform: scale(1.02);
+}
+
+.cta .cta-project button a {
+  color: white;
+  font-size: 1rem;
+  font-family: var(--secondary-font);
+  font-weight: bold;
+}
+
+.cta .cta-contact button a {
+  color: var(--black-color);
+  font-size: 1rem;
+  font-family: var(--secondary-font);
+  font-weight: bold;
+}
+
+/* Tentang Saya */
+.tentang {
+  max-width: 100%;
+  position: relative;
+}
+
+.tentang .heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.3rem;
+}
+
+.tentang .heading .title {
+  background-color: var(--secondary-color);
+  border-radius: 10pc;
+  padding: 0.8rem 2rem;
+  max-width: fit-content;
+}
+
+.tentang .heading .title span {
+    font-weight: bold;
     font-family: var(--secondary-font);
-    font-size: 1.2rem;
+    color: var(--black-color);
+}
+
+.tentang .heading .title span i {
+    color: var(--gold-color);
+    padding-right: 10px;
+}
+
+.tentang .heading .subtitle p {
+    color: var(--black-color);
+    font-family: var(--secondary-font);
+    font-weight: 500;
+}
+
+.tentang .main-content {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 5rem ;
+}
+
+.tentang .main-content .left-col {
+    flex-basis: 40%;
+    position: relative;
+}
+
+.tentang .main-content .right-col {
+    display: flex;
+    flex-basis: 55%;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.tentang .main-content .left-col .box {
+    background-color: var(--main-color);
+    display: block;
+    position: absolute;
+    width: 300px;
+    height: 350px;
+    border-radius: 12px;
+    z-index: -1;
+    transform: rotate(5deg);
+}
+
+.tentang .main-content .left-col img {
+    border: 3px solid var(--main-color) ;
+    border-radius: 12px;
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+}
+
+.tentang .main-content .right-col .about .title h2,
+.tentang .main-content .right-col .skills .title h2 {
+    color: var(--black-color);
+    font-size: 1.8rem;
+}
+
+.tentang .main-content .right-col .about .description p {
+    text-align: justify;
+    color: var(--black-color);
+    font-family: var(--secondary-font);
+    margin-top: 1rem;
+    line-height: 27px;
+}
+
+
+.tentang .main-content .right-col .skill-badge {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.tentang .main-content .right-col .skill-badge .badge {
+    background-color: var(--secondary-color);
+    padding: 0.5rem 1.3rem;
+    border-radius: 10pc;
+    font-family: var(--secondary-font);
     font-weight: 500;
     color: var(--black-color);
 }
 
-.beranda .textbox .slogan span {
-    color: var(--main-color);
-}
-
-.beranda .textbox .description p {
-    font-family: var(--secondary-font);
-    color: var(--black-color);
-    line-height: 27px;
-    font-size: 1.1rem;
-}
-
-.cta {
-    max-width: 100%;
-    display: flex;
-    gap: 1.3rem;
-    margin-top: 3rem;
-    justify-content: center;
-}
 
 
-.cta .cta-project button {
+.tentang .main-content .right-col .skill-badge .badge:nth-child(even) {
     background-color: var(--main-color);
-    outline: none;
-    border: none;
-    border-radius: 10pc;
-    padding: 0.8rem 2rem;
-    transition: all 0.3s;
-}
-
-.cta .cta-project button:hover {
-    transform: scale(1.02);
-}
-
-.cta .cta-contact button {
-    border: 2px solid #d9d9d9;
-    padding: 0.8rem 3.2rem;
-    border-radius: 10pc;
-    transition: all 0.3s;
-}
-
-.cta .cta-contact button:hover {
-    transform: scale(1.02);
-}
-
-
-.cta .cta-project button a {
     color: white;
-    font-size: 1rem;
-    font-family: var(--secondary-font);
-    font-weight: bold;
 }
 
-.cta .cta-contact button a {
-    color: var(--black-color);
-    font-size: 1rem;
-    font-family: var(--secondary-font);
-    font-weight: bold;
+.tentang .main-content .right-col .skill-badge .badge i {
+    margin-right: 0.5rem;
 }
+
