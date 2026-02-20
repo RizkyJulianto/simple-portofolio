@@ -29,7 +29,7 @@
   <body>
     <!-- Header -->
     <header>
-      <nav class="navbar">
+      <nav class="navbar" id="navbar">
         <div class="logo">
           <h3>Portofolio</h3>
         </div>
@@ -224,43 +224,54 @@
 
       <div class="main-content">
         <div class="card">
-            <div class="icon">
-                <i class="fa-solid fa-envelope"></i>
-            </div>
+          <div class="icon">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
 
-            <div class="title">
-                <h3>Email Saya</h3>
-            </div>
+          <div class="title">
+            <h3>Email Saya</h3>
+          </div>
 
-            <div class="email">
-                <span>juliantorizky01@gmail.com</span>
-            </div>
+          <div class="email">
+            <span>juliantorizky01@gmail.com</span>
+          </div>
 
-            <div class="slogan">
-                <span>"Ngoding Secukupnya, Ngulik Seperlunya"</span>
-            </div>
+          <div class="slogan">
+            <span>"Ngoding Secukupnya, Ngulik Seperlunya"</span>
+          </div>
 
-            <div class="sosial-media">
-                <a href=""><i class="fa-brands fa-instagram"></i></a>
-                <a href=""><i class="fa-brands fa-linkedin"></i></a>
-                <a href=""><i class="fa-brands fa-github"></i></a>
-            </div>
+          <div class="sosial-media">
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            <a href=""><i class="fa-brands fa-github"></i></a>
+          </div>
         </div>
       </div>
     </section>
     <!-- Kontak End-->
 
-
     <!-- Footer -->
     <footer class="footer">
-        <div class="logo">
-            <h3>Portofolio</h3>
-        </div>
+      <div class="logo">
+        <h3>Portofolio</h3>
+      </div>
 
-        <div class="copyright">
-            <span>Made with by Rizky Julianto © 2026</span>
-        </div>
+      <div class="copyright">
+        <span>Made with by Rizky Julianto © 2026</span>
+      </div>
     </footer>
     <!-- Footer End -->
+
+    <script>
+      window.addEventListener("scroll", () => {
+        const ScrollY = window.pageYOffset;
+
+        if (ScrollY > 5) {
+          document.getElementById("navbar").classList.add("sticky");
+        } else {
+          document.getElementById("navbar").classList.remove("sticky");
+        }
+      });
+    </script>
   </body>
 </html>

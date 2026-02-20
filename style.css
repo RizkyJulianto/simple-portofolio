@@ -17,8 +17,6 @@
   --black-color: rgb(0, 0, 0, 0.8);
 }
 
-
-
 header {
   max-width: 100%;
 }
@@ -30,6 +28,17 @@ header {
   align-items: center;
   box-shadow: 0 0 4px rgb(0, 0, 0, 0.4);
 }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all 0.5s;
+  background-color: var(--main-color);
+  z-index: 999;
+}
+
 
 .navbar .logo h3 {
   font-family: var(--secondary-font);
@@ -52,7 +61,7 @@ header {
 }
 
 .navbar ul li a::after {
-  content: '';
+  content: "";
   width: 0%;
   height: 2px;
   background-color: var(--main-color);
@@ -61,9 +70,23 @@ header {
 }
 
 .navbar ul li a:hover::after {
-  color: var(--main-color);
+  background-color: var(--main-color);
   width: 100%;
 }
+
+.sticky .logo h3 {
+  color: white;
+}
+
+
+.sticky ul li a {
+  color: white;
+}
+
+.sticky ul li a:hover::after{
+    background-color: white;
+}
+
 
 /* Beranda */
 .beranda {
@@ -72,7 +95,8 @@ header {
   height: 100dvh;
   flex-direction: column;
   align-items: center;
-  margin-top: 3rem;
+  margin-top: 5rem;
+  scroll-margin-top: 10rem;
 }
 
 .beranda .textbox {
@@ -137,8 +161,6 @@ header {
   transition: all 0.3s;
 }
 
-
-
 .cta .cta-project button:hover {
   transform: scale(1.02);
   background-color: #0568fd;
@@ -173,11 +195,12 @@ header {
 .tentang {
   max-width: 100%;
   position: relative;
+  scroll-margin-top: 11rem;
 }
 
 .tentang .heading,
 .projek .heading,
-.kontak .heading{
+.kontak .heading {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -185,8 +208,8 @@ header {
 }
 
 .tentang .heading .title,
-.projek .heading .title, 
-.kontak .heading .title{
+.projek .heading .title,
+.kontak .heading .title {
   background-color: var(--secondary-color);
   border-radius: 10pc;
   padding: 0.8rem 2rem;
@@ -202,8 +225,8 @@ header {
 }
 
 .tentang .heading .title span i,
-.projek .heading .title span i, 
-.kontak .heading .title span i{
+.projek .heading .title span i,
+.kontak .heading .title span i {
   color: var(--gold-color);
   padding-right: 10px;
 }
@@ -228,14 +251,13 @@ header {
   cursor: pointer;
 }
 
-.tentang .main-content .left-col:hover img {    
-    transform: translateY(-8px);
+.tentang .main-content .left-col:hover img {
+  transform: translateY(-8px);
 }
 
 .tentang .main-content .left-col:hover .box {
-    transform: rotate(8deg) translate(10px, 10px);
+  transform: rotate(8deg) translate(10px, 10px);
 }
-
 
 .tentang .main-content .right-col {
   display: flex;
@@ -256,8 +278,6 @@ header {
   transition: all 0.5s;
 }
 
-
-
 .tentang .main-content .left-col img {
   border: 3px solid var(--main-color);
   border-radius: 12px;
@@ -266,8 +286,6 @@ header {
   object-fit: cover;
   transition: all 0.3s;
 }
-
-
 
 .tentang .main-content .right-col .about .title h2,
 .tentang .main-content .right-col .skills .title h2 {
@@ -302,8 +320,8 @@ header {
 }
 
 .tentang .main-content .right-col .skill-badge .badge:hover {
-    background-color: var(--gold-color);
-    transform: scale(1.01);
+  background-color: var(--gold-color);
+  transform: scale(1.01);
 }
 
 .tentang .main-content .right-col .skill-badge .badge:nth-child(even) {
@@ -312,7 +330,7 @@ header {
 }
 
 .tentang .main-content .right-col .skill-badge .badge:nth-child(even):hover {
-    background-color: #0568fd;
+  background-color: #0568fd;
 }
 
 .tentang .main-content .right-col .skill-badge .badge i {
@@ -321,171 +339,166 @@ header {
 
 /* Projek */
 
-.projek{
-    width: 100%;
-    padding: 9rem 1.5rem;
+.projek {
+  width: 100%;
+  padding: 9rem 1.5rem;
 }
 
 .projek .main-content,
-.kontak .main-content{
-    display: flex;
-    margin-top: 4rem;
-    width: 100%;
-    justify-content: center;
-    gap: 2rem;
+.kontak .main-content {
+  display: flex;
+  margin-top: 4rem;
+  width: 100%;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .projek .main-content .card {
-    border: 1px solid #d9d9d9;
-    border-radius: 12px;
-    max-width: 364px;
-    box-shadow: 0 0 4px rgb(0, 0, 0, 0.4);
-    transition: all 0.5s;
-    cursor: pointer;
+  border: 1px solid #d9d9d9;
+  border-radius: 12px;
+  max-width: 364px;
+  box-shadow: 0 0 4px rgb(0, 0, 0, 0.4);
+  transition: all 0.5s;
+  cursor: pointer;
 }
 
 .projek .main-content .card:hover {
-    transform: translateY(-4px);
+  transform: translateY(-4px);
 }
 
 .projek .main-content .card .img img {
-    max-width: 100%;
-    border-radius: 12px 12px 0 0;
+  max-width: 100%;
+  border-radius: 12px 12px 0 0;
 }
 
 .projek .main-content .card .title h3 {
-    padding: 0.5rem 1.3rem;
-    color: var(--black-color);
-    font-size: 1rem;
+  padding: 0.5rem 1.3rem;
+  color: var(--black-color);
+  font-size: 1rem;
 }
 
 .projek .main-content .card .description p {
-    text-align: justify;
-    padding: 0.5rem 1.3rem;
-    font-family: var(--secondary-font);
-    color: var(--black-color);
-    font-weight: 400;
-    line-height: 25px;
+  text-align: justify;
+  padding: 0.5rem 1.3rem;
+  font-family: var(--secondary-font);
+  color: var(--black-color);
+  font-weight: 400;
+  line-height: 25px;
 }
 
 .projek .main-content .card .cta {
-    display: inline-block;
-    padding: 1rem 1.5rem;
+  display: inline-block;
+  padding: 1rem 1.5rem;
 }
 
 .projek .main-content .card .cta button {
-    border-radius: 6px;
-    padding: 0.5rem 1.4rem;
-    border: none;
-    outline: none;
-    background-color: var(--main-color);
-    transition: all 0.3s;
+  border-radius: 6px;
+  padding: 0.5rem 1.4rem;
+  border: none;
+  outline: none;
+  background-color: var(--main-color);
+  transition: all 0.3s;
 }
 
 .projek .main-content .card .cta button:hover {
-    background-color: #0568fd;
-    transform: scale(1.01);
+  background-color: #0568fd;
+  transform: scale(1.01);
 }
-
-
 
 .projek .main-content .card .cta button a {
-    color: white;
-    font-family: var(--secondary-font);
-    font-weight: bold;
+  color: white;
+  font-family: var(--secondary-font);
+  font-weight: bold;
 }
-
 
 /* Kontak */
 .kontak {
-    width: 100%;
-    padding: 5rem 1.5rem;
+  width: 100%;
+  padding: 5rem 1.5rem;
+  scroll-margin-top: 8rem;
 }
 
 .kontak .main-content .card {
-    border: 1px solid #d9d9d9;
-    border-radius: 12px;
-    box-shadow: 0 0 4px rgb(0, 0, 0, 0.4);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 3rem 4rem 4rem;
-    transition: all 0.5s;
-    cursor: pointer;
+  border: 1px solid #d9d9d9;
+  border-radius: 12px;
+  box-shadow: 0 0 4px rgb(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 4rem 4rem;
+  transition: all 0.5s;
+  cursor: pointer;
 }
 
-.kontak .main-content .card:hover{
-    border:1px solid var(--main-color);
-    transform: translateY(-4px);
+.kontak .main-content .card:hover {
+  border: 1px solid var(--main-color);
+  transform: translateY(-4px);
 }
 
 .kontak .main-content .card .icon {
-    border: 2px solid var(--main-color);
-    padding: 1.3rem;
-    border-radius: 12px;
+  border: 2px solid var(--main-color);
+  padding: 1.3rem;
+  border-radius: 12px;
 }
 
 .kontak .main-content .card .icon i {
-    font-size: 1.6rem;
-    color: var(--main-color);
+  font-size: 1.6rem;
+  color: var(--main-color);
 }
 
 .kontak .main-content .card .title h3 {
-    color: var(--black-color);
-    margin-top: 1.5rem;
+  color: var(--black-color);
+  margin-top: 1.5rem;
 }
 
 .kontak .main-content .card .email span {
-    color: var(--main-color);
-    font-family: var(--secondary-font);
-    font-weight: bold;
-    display: inline-block;
-    margin-top: 0.6rem;
+  color: var(--main-color);
+  font-family: var(--secondary-font);
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 0.6rem;
 }
 
 .kontak .main-content .card .slogan span {
-    margin-top: 1rem;
-    display: inline-block;
-    font-family: var(--secondary-font);
-    font-weight: bold;
-    color: rgb(0, 0, 0, 0.6);
-    font-style: italic;
-    font-size: 1.3rem;
+  margin-top: 1rem;
+  display: inline-block;
+  font-family: var(--secondary-font);
+  font-weight: bold;
+  color: rgb(0, 0, 0, 0.6);
+  font-style: italic;
+  font-size: 1.3rem;
 }
 
 .kontak .main-content .card .sosial-media {
-    margin-top: 3rem;  
+  margin-top: 3rem;
 }
 
-.kontak .main-content .card .sosial-media a{
-    border-radius: 12px;
-    font-size: 1.4rem;
-    margin: 0 10px;
-    color: var(--main-color);
-    padding: 0.8rem;
-    border: 1px solid #d9d9d9;
-    box-shadow: 0 0 4px rgb(0, 0, 0, 0.2);
-    transition: all 0.5s;
+.kontak .main-content .card .sosial-media a {
+  border-radius: 12px;
+  font-size: 1.4rem;
+  margin: 0 10px;
+  color: var(--main-color);
+  padding: 0.8rem;
+  border: 1px solid #d9d9d9;
+  box-shadow: 0 0 4px rgb(0, 0, 0, 0.2);
+  transition: all 0.5s;
 }
 
 .kontak .main-content .card .sosial-media a:hover {
-    background-color: var(--main-color);
-    color: white;
+  background-color: var(--main-color);
+  color: white;
 }
-
 
 /* Footer */
 .footer {
-    max-width: 100%;
-    padding: 1.2rem 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 9rem;
-    border-top: 1px solid #d9d9d9;
+  max-width: 100%;
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 9rem;
+  border-top: 1px solid #d9d9d9;
 }
-
-
 
 .footer .logo h3 {
   font-family: var(--secondary-font);
@@ -495,8 +508,8 @@ header {
 }
 
 .footer .copyright span {
-    font-family: var(--secondary-font);
-    color: rgb(0, 0, 0, 0.6);
-    font-size: 0.8rem;
-    font-weight: 500;
+  font-family: var(--secondary-font);
+  color: rgb(0, 0, 0, 0.6);
+  font-size: 0.8rem;
+  font-weight: 500;
 }
