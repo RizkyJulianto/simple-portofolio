@@ -33,12 +33,22 @@
         <div class="logo">
           <h3>Portofolio</h3>
         </div>
-        <ul>
+        <ul id="navLinks">
           <li><a href="#beranda">Beranda</a></li>
           <li><a href="#tentang">Tentang Saya</a></li>
           <li><a href="#projek">Projek</a></li>
           <li><a href="#kontak">Kontak </a></li>
+
+          <div class="close-menu" onclick="hideMenu()">
+            <i class="fa-solid fa-x"></i>
+          </div>
         </ul>
+
+        <div id="overlay" onclick="hideMenu()"></div>
+
+        <div class="hamburger-menu" onclick="showMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
       </nav>
     </header>
     <!-- End Header -->
@@ -263,6 +273,20 @@
     <!-- Footer End -->
 
     <script>
+      const navLinks = document.getElementById("navLinks");
+      const overlay = document.getElementById("overlay");
+
+      function showMenu() {
+        navLinks.style.top = "120px";
+        overlay.classList.add("active");
+        document.body.classList.add("no-scroll");
+      }
+
+      function hideMenu() {
+         navLinks.style.top = "-999px";
+         overlay.classList.remove("active");
+         document.body.classList.remove("no-scroll");
+      }
       window.addEventListener("scroll", () => {
         const ScrollY = window.pageYOffset;
 

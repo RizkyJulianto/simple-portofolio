@@ -39,7 +39,6 @@ header {
   z-index: 999;
 }
 
-
 .navbar .logo h3 {
   font-family: var(--secondary-font);
   font-weight: bold;
@@ -78,15 +77,36 @@ header {
   color: white;
 }
 
-
 .sticky ul li a {
   color: white;
 }
 
-.sticky ul li a:hover::after{
-    background-color: white;
+.sticky ul li a:hover::after {
+  background-color: white;
 }
 
+.hamburger-menu,
+.close-menu {
+  display: none;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 998;
+}
+
+#overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
 
 /* Beranda */
 .beranda {
@@ -105,7 +125,6 @@ header {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
-  margin-top: 1rem;
 }
 
 .beranda .badge {
@@ -512,4 +531,220 @@ header {
   color: rgb(0, 0, 0, 0.6);
   font-size: 0.8rem;
   font-weight: 500;
+}
+
+/* Responsif */
+
+/* Mobile */
+
+@media (min-width: 400px) and (max-width: 767px) {
+  body.no-scroll {
+    overflow: hidden;
+  }
+
+  /* Navbar Mobile */
+  .navbar {
+    position: relative;
+  }
+
+  .navbar ul {
+    position: fixed;
+    flex-direction: column;
+    top: -999px;
+    z-index: 999;
+    left: 10%;
+    padding: 2rem;
+    border: 1px solid var(--main-color);
+    background-color: white;
+    box-shadow: 0 0 6px rgb(0, 0, 0, 0.2);
+    border-radius: 12px;
+    width: 80%;
+    transition: all 0.5s;
+  }
+
+  .navbar ul li {
+    border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+    padding: 1rem 0;
+  }
+
+  .navbar ul li a {
+    font-size: 1rem;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .hamburger-menu i {
+    font-size: 1.4rem;
+  }
+
+  .close-menu {
+    display: block;
+    position: absolute;
+    background-color: var(--main-color);
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    color: white;
+    height: 50px;
+    top: -30px;
+    right: -20px;
+  }
+
+  .sticky {
+    position: fixed;
+  }
+
+  .sticky ul li a {
+    color: var(--black-color);
+  }
+
+  .sticky .hamburger-menu i {
+    color: white;
+    transition: all 0.3s;
+  }
+
+  /* Beranda Mobile  */
+  .beranda .textbox {
+    margin-top: 0.8rem;
+  }
+
+  .beranda .textbox .name h2 {
+    font-size: 2.3rem;
+  }
+
+  .beranda .textbox .slogan p {
+    font-size: 1rem;
+  }
+
+  .beranda .textbox .description p {
+    font-size: 0.9rem;
+    max-width: 350px;
+  }
+
+  .beranda .cta {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .beranda .cta .cta-project button {
+    width: 100%;
+    padding: 1rem 5rem;
+  }
+
+  .beranda .cta .cta-contact button {
+    padding: 1rem 6.2rem;
+  }
+
+  /* Tentang Mobile */
+  .tentang .heading .title span,
+  .beranda .badge,
+  .projek .heading .title span,
+  .kontak .heading .title span {
+    font-size: 0.9rem;
+  }
+
+  .tentang .heading .subtitle p,
+  .projek .heading .subtitle p,
+  .kontak .heading .subtitle p {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  .tentang .main-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+    padding: 5rem 1.5rem;
+  }
+
+  .tentang .main-content .left-col .box {
+    width: 280px;
+    height: 330px;
+  }
+
+  .tentang .main-content .left-col img {
+    width: 280px;
+    height: 330px;
+  }
+
+  .tentang .main-content .right-col .about .title h2,
+  .tentang .main-content .right-col .skills .title h2 {
+    font-size: 1.5rem;
+  }
+
+  .tentang .main-content .right-col .skill-badge .badge {
+    padding: 0.4rem 0.8rem;
+  }
+
+  /* Projek Mobile */
+  .projek .main-content {
+    flex-direction: column;
+  }
+
+  /* Kontak Mobile */
+  .kontak .main-content .card {
+    padding: 3rem;
+  }
+  .kontak .main-content .card .slogan span {
+    font-size: 1.1rem;
+    line-height: 25px;
+    text-align: center;
+  }
+
+  /* Footer Mobile*/
+  .footer {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .footer .logo h3 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Beranda Tablet */
+  .beranda {
+    display: flex;
+    margin-top: 7rem;
+  }
+
+  /*Tentang Tablet  */
+  .tentang .heading .subtitle p,
+  .projek .heading .subtitle p {
+    font-size: 1.1rem;
+  }
+
+  .tentang .main-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  .tentang .main-content .left-col .box {
+    width: 400px;
+    height: 420px;
+  }
+
+  .tentang .main-content .left-col img {
+    width: 400px;
+    height: 400px;
+  }
+
+  /* Projek Tablet */
+  .projek .main-content {
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+
+  .projek .main-content .card {
+    max-width: 340px;
+  }
 }
