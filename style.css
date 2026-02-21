@@ -712,6 +712,74 @@ header {
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 1024px) {
+  body.no-scroll {
+    overflow: hidden;
+  }
+
+  /* Navbar Mobile */
+  .navbar {
+    position: relative;
+  }
+
+  .navbar ul {
+    position: fixed;
+    flex-direction: column;
+    top: -999px;
+    z-index: 999;
+    left: 10%;
+    padding: 2rem;
+    border: 1px solid var(--main-color);
+    background-color: white;
+    box-shadow: 0 0 6px rgb(0, 0, 0, 0.2);
+    border-radius: 12px;
+    width: 80%;
+    transition: all 0.5s;
+  }
+
+  .navbar ul li {
+    border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+    padding: 1rem 0;
+  }
+
+  .navbar ul li a {
+    font-size: 1rem;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .hamburger-menu i {
+    font-size: 1.4rem;
+  }
+
+  .close-menu {
+    display: block;
+    position: absolute;
+    background-color: var(--main-color);
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    color: white;
+    height: 50px;
+    top: -30px;
+    right: -20px;
+  }
+
+  .sticky {
+    position: fixed;
+  }
+
+  .sticky ul li a {
+    color: var(--black-color);
+  }
+
+  .sticky .hamburger-menu i {
+    color: white;
+    transition: all 0.3s;
+  }
   /* Beranda Tablet */
   .beranda {
     display: flex;
