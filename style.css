@@ -537,7 +537,7 @@ header {
 
 /* Mobile */
 
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 375px) and (max-width: 767px) {
   body.no-scroll {
     overflow: hidden;
   }
@@ -694,6 +694,9 @@ header {
     font-size: 1.1rem;
     line-height: 25px;
     text-align: center;
+  }
+  .kontak .main-content .card .sosial-media a {
+    padding: 0.5rem;
   }
 
   /* Footer Mobile*/
