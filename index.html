@@ -34,10 +34,10 @@
           <h3>Portofolio</h3>
         </div>
         <ul id="navLinks">
-          <li><a href="#beranda">Beranda</a></li>
-          <li><a href="#tentang">Tentang Saya</a></li>
-          <li><a href="#projek">Projek</a></li>
-          <li><a href="#kontak">Kontak </a></li>
+          <li><a href="#beranda" onclick="hideMenu()">Beranda</a></li>
+          <li><a href="#tentang" onclick="hideMenu()">Tentang Saya</a></li>
+          <li><a href="#projek" onclick="hideMenu()">Projek</a></li>
+          <li><a href="#kontak" onclick="hideMenu()">Kontak </a></li>
 
           <div class="close-menu" onclick="hideMenu()">
             <i class="fa-solid fa-x"></i>
@@ -80,14 +80,14 @@
       <div class="cta">
         <div class="cta-project">
           <button>
-            <a href=""
+            <a href="#projek"
               >Lihat Projek Saya <i class="fa-solid fa-arrow-down"></i
             ></a>
           </button>
         </div>
 
         <div class="cta-contact">
-          <button><a href="">Hubungi Saya </a></button>
+          <button><a href="#kontak">Hubungi Saya </a></button>
         </div>
       </div>
     </section>
@@ -100,7 +100,10 @@
           <span><i class="fa-solid fa-user"></i> Tentang Saya</span>
         </div>
         <div class="subtitle">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <p>
+            Seorang individu yang memiliki minat dalam dunia web development dan
+            teknologi.
+          </p>
         </div>
       </div>
 
@@ -117,14 +120,13 @@
             </div>
             <div class="description">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                fringilla interdum eros, at facilisis mi. Integer sollicitudin
-                arcu sit amet ex porta, eget tempor velit varius. Nunc ornare
-                dignissim enim, sit amet consectetur risus pellentesque id. Nunc
-                suscipit tempus vestibulum. Fusce eget leo nec odio aliquet
-                sagittis quis nec diam. Vivamus elementum commodo enim id
-                accumsan. Nullam pellentesque augue est, eu lacinia urna
-                ultrices at.
+                Saya adalah mahasiswa yang memiliki minat dalam bidang web
+                development dan saat ini mengikuti program BESMART Beginner
+                untuk memperdalam kemampuan frontend. Saya mempelajari
+                dasar-dasar HTML, CSS, dan TailwindCSS untuk membangun website
+                yang responsif dan modern. Saya senang mempelajari hal baru,
+                terbiasa memecahkan masalah secara logis, dan berkomitmen untuk
+                terus berkembang sebagai developer.
               </p>
             </div>
           </div>
@@ -161,7 +163,7 @@
           <span><i class="fa-solid fa-folder"></i> Projek Saya</span>
         </div>
         <div class="subtitle">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <p>Beberapa projek yang telah saya kerjakan dan kembangkan.</p>
         </div>
       </div>
 
@@ -170,51 +172,59 @@
           <div class="img">
             <img src="img/project-1.jpg" alt="" />
           </div>
-          <div class="title">
-            <h3>Personal Portofolio Website</h3>
-          </div>
-          <div class="description">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-              fringilla interdum eros, at facilisis mi.
-            </p>
-          </div>
-          <div class="cta">
-            <button><a href="">Lihat Detail</a></button>
+          <div class="card-content">
+            <div class="title">
+              <h3>Personal Portofolio Website</h3>
+            </div>
+            <div class="description">
+              <p>
+                Website portfolio pribadi yang menampilkan profil, keahlian, dan
+                projek dalam tampilan yang responsif dan modern.
+              </p>
+            </div>
+            <div class="cta">
+              <button><a href="">Lihat Detail</a></button>
+            </div>
           </div>
         </div>
         <div class="card">
           <div class="img">
             <img src="img/project-2.jpg" alt="" />
           </div>
-          <div class="title">
-            <h3>Simple Landing Page</h3>
-          </div>
-          <div class="description">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-              fringilla interdum eros, at facilisis mi.
-            </p>
-          </div>
-          <div class="cta">
-            <button><a href="">Lihat Detail</a></button>
+
+          <div class="card-content">
+            <div class="title">
+              <h3>Simple Landing Page</h3>
+            </div>
+            <div class="description">
+              <p>
+                Landing page sederhana yang dirancang untuk menyampaikan
+                informasi secara jelas dengan tampilan yang menarik.
+              </p>
+            </div>
+            <div class="cta">
+              <button><a href="">Lihat Detail</a></button>
+            </div>
           </div>
         </div>
         <div class="card">
           <div class="img">
             <img src="img/project-3.jpg" alt="" />
           </div>
-          <div class="title">
-            <h3>Company Profile Website</h3>
-          </div>
-          <div class="description">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-              fringilla interdum eros, at facilisis mi.
-            </p>
-          </div>
-          <div class="cta">
-            <button><a href="">Lihat Detail</a></button>
+
+          <div class="card-content">
+            <div class="title">
+              <h3>Company Profile Website</h3>
+            </div>
+            <div class="description">
+              <p>
+                Website company profile yang menampilkan informasi perusahaan,
+                layanan, dan identitas secara profesional.
+              </p>
+            </div>
+            <div class="cta">
+              <button><a href="">Lihat Detail</a></button>
+            </div>
           </div>
         </div>
       </div>
@@ -283,9 +293,9 @@
       }
 
       function hideMenu() {
-         navLinks.style.top = "-999px";
-         overlay.classList.remove("active");
-         document.body.classList.remove("no-scroll");
+        navLinks.style.top = "-999px";
+        overlay.classList.remove("active");
+        document.body.classList.remove("no-scroll");
       }
       window.addEventListener("scroll", () => {
         const ScrollY = window.pageYOffset;
